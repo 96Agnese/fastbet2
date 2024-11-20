@@ -11,34 +11,43 @@ const Header: React.FC = () => {
   const [isAccordionGames, setIsAccordionGames] = useState(false);
 
   const handleLinkClick = () => {
-    setOpenMobile(false); // Chiude il menu mobile
-    setIsAccordionGames(false); // Chiude l'accordion se aperto
+    setOpenMobile(false);
+    setIsAccordionGames(false);
   };
 
   const toggleAccordion = () => {
     setIsAccordionGames(!isAccordionGames);
   };
+
+  const data = [
+    {
+      label: "SPORT",
+      to: "/sport",
+    },
+    {
+      label: "SPORT LIVE",
+      to: "/sport-live",
+    },
+    {
+      label: "SLOT",
+      to: "/casino",
+    },
+    {
+      label: "CASINO",
+      to: "/sport",
+    },
+  ];
   return (
     <header className={styles["header"]}>
       <div className={styles["header__inline-logo"]}>
         <img height={50} src={logogreen} alt="" className={styles["header__logo-desktop"]} />
         <nav className={styles["header__nav"]}>
-          <Link
-            className={styles["header__link"]}
-            to="/items-header/sport"
-            onClick={handleLinkClick}
-          >
-            SPORT
-          </Link>
-          <Link className={styles["header__link"]} to="/sport-live" onClick={handleLinkClick}>
-            SPORT LIVE
-          </Link>
-          <Link className={styles["header__link"]} to="/slot" onClick={handleLinkClick}>
-            SLOT
-          </Link>
-          <Link className={styles["header__link"]} to="/casino" onClick={handleLinkClick}>
-            CASINO
-          </Link>
+          {data.map((item) => (
+            <Link className={styles["header__link"]} to={item.to} onClick={handleLinkClick}>
+              {item.label}
+            </Link>
+          ))}
+
           <div className={styles["header__link"]} onClick={toggleAccordion}>
             ALTRI GIOCHI
           </div>
@@ -78,10 +87,6 @@ const Header: React.FC = () => {
           </Link>
         </div>
       )}
-
-      {/* <Link to="/">Home</Link>
-
-      <Link to="/about">About</Link> */}
     </header>
   );
 };
