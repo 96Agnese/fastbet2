@@ -1,9 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
-      <h1>Welcome to the Home Page!</h1>
+      <img
+        style={{
+          display: "flex",
+          borderRadius: 20,
+          width: "100%",
+          marginTop: 80,
+          marginBottom: 80,
+          placeItems: "center",
+        }}
+        src="/src/assets/banner.png"
+        alt=""
+      />
     </div>
   );
 };
