@@ -1,0 +1,105 @@
+@use "../../styles/variables.scss" as variables;
+
+.footer {
+  color: map-get($map: variables.$gray-secondary, $key: white);
+  padding-block: 50px;
+  background-color: map-get($map: variables.$green, $key: secondary);
+
+  &__inline {
+    display: grid;
+    padding-inline: 100px;
+    column-gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-inline: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xs)) {
+      grid-template-columns: 1fr;
+      padding-inline: 24px;
+    }
+  }
+
+  &__section {
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    color: white;
+    padding-bottom: 16px;
+  }
+
+  &__subtitle {
+    color: white;
+    cursor: pointer;
+    padding-bottom: 16px;
+  }
+
+  &__method {
+    color: white;
+    padding-bottom: 16px;
+  }
+
+  &__method {
+    color: white;
+    padding-top: 32px;
+  }
+
+  &__policy {
+    color: white;
+    padding-inline: 100px;
+    padding-top: 32px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      padding-inline: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xs)) {
+      grid-template-columns: 1fr;
+      padding-inline: 24px;
+    }
+  }
+
+  &__reservation {
+    color: white;
+    padding-top: 32px;
+    padding-inline: 100px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      padding-inline: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xs)) {
+      grid-template-columns: 1fr;
+      padding-inline: 24px;
+    }
+  }
+
+  &__inline-payment {
+    padding-inline: 100px;
+    background-color: map-get($map: variables.$green, $key: primary);
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      padding-inline: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xs)) {
+      grid-template-columns: 1fr;
+      padding-inline: 24px;
+    }
+  }
+  &__display-payment {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      overflow-y: scroll;
+      overflow-y: hidden;
+    }
+  }
+}
