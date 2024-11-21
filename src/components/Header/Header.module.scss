@@ -20,7 +20,6 @@
     font-size: 16px;
     font-weight: bold;
     position: relative;
-    padding: 0px 8px;
   }
 
   &__link::after {
@@ -45,11 +44,15 @@
     gap: 40px;
   }
 
+  &__logo-desktop {
+    padding-bottom: 8px;
+  }
+
   &__nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 24px;
   }
 
   &__inline-btns-desktop {

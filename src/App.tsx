@@ -5,7 +5,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import HomePage from "./screens/Homepage/Homepage";
 import Footer from "./components/Footer/Footer";
-import Sport from "./screens/Sport/Sport";
+import Sport from "./screens/ItemsHeader/Sport/Sport";
 import HeaderMobile from "./components/Header/HeaderMobile/HeaderMobile";
 import { useEffect, useState } from "react";
 
@@ -44,12 +44,6 @@ function App() {
         </main>
         <Footer />
       </div>
-      {/* <LayoutPage>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/items-header/sport" element={<Sport />} />
-        </Routes>
-      </LayoutPage> */}
     </Router>
   );
 }

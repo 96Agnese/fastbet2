@@ -5,10 +5,17 @@ import Button from "../Button/Button";
 import logogreen from "../../assets/LOGO/Green/logo-verde2.png";
 
 import regal from "../../assets/regal.png";
+import Toggle from "../Toggle/Toggle";
 
 const Header: React.FC = () => {
   const [openMobile, setOpenMobile] = useState(false);
   const [isAccordionGames, setIsAccordionGames] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleToggleChange = (checked: boolean) => {
+    setIsDarkMode(checked);
+    console.log("Dark Mode:", checked ? "On" : "Off");
+  };
 
   const handleLinkClick = () => {
     setOpenMobile(false);
@@ -60,7 +67,7 @@ const Header: React.FC = () => {
           >
             PROMOZIONI
           </Button>
-          {/* <Toggle isChecked={isDarkMode} onChange={handleToggleChange} /> */}
+          <Toggle isChecked={isDarkMode} onChange={handleToggleChange} />
         </nav>
       </div>
 
