@@ -1,0 +1,89 @@
+@use "../../styles/variables.scss" as variables;
+
+.homepage {
+  &__inline-carousel-esclusive {
+    display: block;
+    gap: 24px;
+    overflow-x: scroll;
+    padding-bottom: 40px;
+    white-space: nowrap;
+    margin-left: 150px;
+    margin-right: 150px;
+    // padding-inline: 80px;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xl)) {
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  &__inline-number {
+    gap: 150px;
+    overflow-x: scroll;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 150px;
+    margin-right: 150px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xl)) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  &__inline-carousel-user {
+    display: block;
+    gap: 24px;
+    overflow-x: scroll;
+    padding-bottom: 40px;
+    white-space: nowrap;
+    margin-left: 150px;
+    margin-right: 150px;
+    // padding-inline: 80px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, xl)) {
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  &__title-1 {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 16px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      margin-left: 24px;
+      margin-right: 24px;
+
+      font-size: 16px;
+    }
+  }
+
+  &__title-2 {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 16px;
+
+    @media only screen and (max-width: map-get(variables.$breakpoints, medium)) {
+      margin-left: 24px;
+      margin-right: 24px;
+      font-size: 16px;
+    }
+  }
+}

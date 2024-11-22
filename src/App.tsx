@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Sport from "./screens/ItemsHeader/Sport/Sport";
 import HeaderMobile from "./components/Header/HeaderMobile/HeaderMobile";
 import { useEffect, useState } from "react";
+import FooterMobile from "./components/Footer/FooterMobile/FooterMobile";
 
 function App() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
