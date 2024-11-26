@@ -1,0 +1,14 @@
+.card-category-mobile {
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+
+  &__first {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

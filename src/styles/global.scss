@@ -1,2 +1,8 @@
 @forward "variables.scss";
 @use "variables.scss" as variables;
+
+:global {
+  .ant-collapse-expand-icon {
+    color: white;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../../styles/variables.scss" as variables;
+
+.header-mobile {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: box-shadow 0.3s ease;
+  background-color: map-get($map: variables.$gray-secondary, $key: bg-light-color);
+
+  &__inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+  }
+
+  &__container-mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    top: 55px;
+    right: 0;
+    left: 0;
+    background-color: map-get($map: variables.$light-color, $key: background-color);
+    margin-top: 16px;
+    z-index: 99999;
+    max-height: 1;
+    transition: left 0.3s ease-in-out;
+    padding: 24px;
+    min-height: 100vh;
+    overflow: hidden;
+    // transition: max-height 0.8s ease;
+  }
+
+  &__inline-icon-theme {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__size-logo {
+    height: 40px;
+  }
+
+  &__inline-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    // width: 100%;
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  &__setting-icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}

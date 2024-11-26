@@ -1,21 +1,87 @@
+@use "../../styles/variables.scss" as variables;
+
 .header {
-  background-color: #333;
+  background-color: map-get($map: variables.$green, $key: green-light);
   color: white;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.header nav ul {
-  list-style: none;
+  padding: 24px;
   display: flex;
-  gap: 15px;
-}
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
 
-.header nav ul li a {
-  color: white;
-  text-decoration: none;
+  &__link {
+    color: map-get($map: variables.$green, $key: primary);
+    font-size: 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    top: 25px;
+    right: 0px;
+    left: 0;
+    background-color: map-get($map: variables.$green, $key: primary);
+    transition: 0.3s;
+  }
+
+  &__link:hover:after {
+    width: 100%;
+  }
+
+  &__inline-logo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo-desktop {
+    padding-bottom: 8px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__inline-btns-desktop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff; //colore tendina other games
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1002;
+    margin-top: 250px;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__link-mobile {
+    font-size: 16px;
+    padding-block: 16px;
+    padding-inline: 16px;
+    color: #4eb687;
+    text-decoration: none;
+  }
 }

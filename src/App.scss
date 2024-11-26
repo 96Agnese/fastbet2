@@ -1,3 +1,5 @@
+@use "./styles/variables.scss" as variables;
+
 #root {
   margin: 0 auto;
 }
@@ -20,4 +22,11 @@
 
 .main-content {
   flex-grow: 1;
+  background-color: map-get($map: variables.$light-color, $key: background-color);
+}
+
+:global {
+  .anticon .anticon-right .ant-collapse-arrow {
+    color: white !important;
+  }
 }
